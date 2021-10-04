@@ -1,0 +1,79 @@
+.divcentertesting {
+    margin:auto;
+    width:50%;
+    border:3px solid green;
+}
+.toywrapper{
+    background-color:white;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.divcenter {
+    margin:auto;
+    width:50%;
+}
+.infoblob {
+    text-align: center;
+    margin:auto;
+    width:50%;
+    padding:2%;
+    background-color:#e2eaff;
+    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.397);
+}
+.infoblob-internal{
+    margin:5%;
+}
+.divw75 {
+    margin:auto;
+    width:75%;
+}
+.textcenter {
+    text-align: center;
+}
+.leftalign { 
+    text-align:left;
+}
+.subtitle{
+    font-size:18px;
+    color:#3b3b3b;
+    text-align:left;
+    font-weight:700;
+}
+.subtitlestats {
+    font-weight:500;
+}
+.farmbackground{
+    background-image: url(/media/background.svg);
+}
+#returncontent{
+    text-align:center;
+}
+#logout-button{
+    background:rgb(117, 0, 0);
+    color:white;
+}
+.center-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+@media only screen and (max-width: 768px) {
+    .infoblob{
+        width:60%;
+        padding:10px;
+    }
+    .divcenter{
+        width:70%;
+        margin:auto;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    .infoblob{
+        width:75%;
+        padding:10px;
+    }
+    .divcenter{
+        width:90%;
+        margin:auto;
+    }
+  }
