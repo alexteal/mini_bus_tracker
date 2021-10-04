@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Sciences Bus Tracker</title>
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/headerFooter.css">
+    <link rel="stylesheet" href="css/loginuser.css">
+    <link rel="stylesheet" href="css/homepage.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<style>
+    body {
+            background-color: black;
+        }
+    
+    * {
+        color: white;
+    }
+    h1 {
+        font-size:20px;
+    }
+    h2 {
+        font-size:100px;
+    }
+    .subtitle{
+        color:white;
+        text-align:center;
+        font-size:40px;
+    }
+    .minutes{
+        line-height: 0px;
+        height: 0px;
+        font-size:200px;
+    }
+    .bushere{
+        font-size:80px;
+    }
+    @media screen and (max-width: 340px) {
+        .minutes{
+            line-height: 0px;
+            height: 0px;
+            font-size:200px;
+        }
+    }
+</style>
+<body>
+    <h1 class="textcenter">Health Sciences Bus <br><br> memorial hall stop</h1>
+    <div id="container"></div>
+    <br><br><br><br><br><br><br>
+</body>
+<script>
+function synchronous_get(){
+    var request = new XMLHttpRequest();
+    request.open('GET', '/memorialhall.php', false);  // `false` makes the request synchronous
+    request.send(null);
+
+    if (request.status === 200) {
+    console.log(request.responseText);
+    $('#container').html(request.responseText);
+    }
+}
+synchronous_get();
+setInterval(synchronous_get,5000);
+</script>
+</html>
